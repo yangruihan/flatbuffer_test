@@ -7,7 +7,7 @@ local monster = require("MyGame.Sample.Monster")
 local vec3 = require("MyGame.Sample.Vec3")
 local weapon = require("MyGame.Sample.Weapon")
 
-local readFile = io.open('monster.bytes', 'rb')
+local readFile = io.open('monster.bin', 'rb')
 
 local bufAsString =  readFile:read('*a')
 readFile:close()

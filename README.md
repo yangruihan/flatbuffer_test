@@ -3,7 +3,31 @@
 使用版本：v1.12.0
 地址：https://github.com/google/flatbuffers/releases/tag/v1.12.0
 
-## 笔记
+## 步骤
+
+1. 编写fbs文件（flatbuffer schema）
+
+2. 使用`flatc`生成对应`read`、`write`脚本
+
+    ```
+    flatc --lua monster.fbs
+    ```
+
+3. 手写生成二进制代码，或通过 json 转成二进制文件
+
+    手写二进制代码见`writetest.lua`
+
+    json 转换命令：
+
+    ```
+    flatc -b monster.fbs monsterdata.json
+    ```
+
+4. 加载二进制文件，读取对应值
+
+    读取代码见`readtest.lua`
+
+## 注意事项
 
 ### Schema
 
