@@ -29,3 +29,6 @@ local y = pos:Y()
 local z = pos:Z()
 
 print(x, y, z)
+
+local color = mon:Color()
+print(color)

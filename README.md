@@ -1,7 +1,7 @@
 # FlatBuffer 测试
 
-使用版本：v1.12.0
-地址：https://github.com/google/flatbuffers/releases/tag/v1.12.0
+- 使用版本：v1.12.0
+- 地址：https://github.com/google/flatbuffers/releases/tag/v1.12.0
 
 ## 步骤
 
@@ -20,7 +20,7 @@
     json 转换命令：
 
     ```
-    flatc -b monster.fbs monsterdata.json
+    flatc -b monster.fbs monster.json
     ```
 
 4. 加载二进制文件，读取对应值
