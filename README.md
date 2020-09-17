@@ -1,5 +1,8 @@
 # FlatBuffer 测试
 
+使用版本：v1.12.0
+地址：https://github.com/google/flatbuffers/releases/tag/v1.12.0
+
 ## 笔记
 
 ### Schema
