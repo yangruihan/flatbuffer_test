@@ -3,7 +3,7 @@
 - 使用版本：v1.12.0
 - 地址：https://github.com/google/flatbuffers/releases/tag/v1.12.0
 
-## 步骤
+## 一、使用步骤
 
 1. 编写fbs文件（flatbuffer schema）
 
@@ -27,7 +27,7 @@
 
     读取代码见`readtest.lua`
 
-## 注意事项
+## 二、注意事项
 
 ### Schema
 
@@ -43,3 +43,43 @@
 
 - `table`或其他 objects，不能嵌套创建，如果在`start`、`end`过程中创建，会抛出异常
 
+## 三、性能对比
+
+```
+##### Load Data #####
+
+----- Test RawTable -----
+UseTime:        1000.0
+UseMemory:      114.22265625    Kb
+
+----- Test FlatBuffer -----
+UseTime:        0.0
+UseMemory:      13.439453125    Kb
+```
+
+## 四、工具
+
+### `fbs_gen_lua.py`
+
+使用 fbs 生成对应的 lua 脚本
+
+```sh
+python fbs_gen_lua.py FBS_PATH
+```
+
+### `table2json.lua`
+
+根据 lua table 生成对应的 json 文件
+
+```sh
+lua table2json LUA_TABLE_PATH OUTPUT_PATH
+```
+
+### `lua_gen_bin.py`
+
+1. 根据 lua table 生成对应 json
+2. 根据 fbs 将 json 转换成 bytes
+
+```sh
+python lua_gen_bin.py PATH
+```
